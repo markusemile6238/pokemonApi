@@ -21,6 +21,8 @@ jobs:
       - name: restore
         run:  dotnet restore
       - name: publish
-        run:  dotnet build /publish
+        run:  dotnet build 
+      - name: publish de build
+        run:  dotnet publish --output /publish
       - name: check publish folder
-        run: ls -l /publish
+        run: ls -l ./publish
