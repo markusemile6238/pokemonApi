@@ -1,11 +1,14 @@
 on:
-  push:
+  workflow_dispatch: # autorise le dclenchement manuel du script
+  
+  push: # declenche le script au push sur master
     branches:
       - master
 
 jobs:
-  hello:
-    runs-on: ubuntu-latest
+  # first job
+  hello: # job name
+    runs-on: ubuntu-latest # runner -> os 
     steps:
-      - name: step 1
-        run:  echo hello
+      - name: step 1 
+        run:  echo hello # a executer
