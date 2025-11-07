@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AzuredApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58cea79ca6d7528890cb75a3a4099321ea502e74")]
 [assembly: System.Reflection.AssemblyProductAttribute("AzuredApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzuredApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
