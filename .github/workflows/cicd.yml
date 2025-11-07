@@ -28,4 +28,6 @@ jobs:
         run: ls -l ./publish
       - name: login to azur
         uses: Azure/login@v2.3.0
+        with:
+          creds: ${{ secrets.GITHUB }}
       - name: published on azur
