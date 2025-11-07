@@ -30,4 +30,4 @@ jobs:
         uses: Azure/login@v2.3.0
         with:
           creds: ${{ secrets.GITHUB }}
-      - name: published on azur
+
