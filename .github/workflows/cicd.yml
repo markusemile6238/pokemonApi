@@ -27,7 +27,7 @@ jobs:
       - name: check publish folder
         run: ls -l ./publish
       - name: login to azur
-        uses: Azure/login@v2.3.0
+        uses: Azure/login@v2
         with:
-          creds: ${{ secrets.GITHUB }}
+          creds: ${{secrets.GITHUB}}
 
