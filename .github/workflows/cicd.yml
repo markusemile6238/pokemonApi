@@ -1,11 +1,33 @@
 on:
-  push:
+  workflow_dispatch: # autorise le dclenchement manuel du script
+  
+  push: # declenche le script au push sur master
     branches:
       - master
 
 jobs:
-  hello:
-    runs-on: ubuntu-latest
+  # first job
+  hello: # job name
+    runs-on: ubuntu-latest # runner -> os 
     steps:
-      - name: step 1
-        run:  echo hello
+      - name: import repo
+        uses: actions/checkout@v5
+      - name: listing
+        run:  ls -l
+      - name: .Net installation
+        uses: actions/setup-dotnet@v5
+        with: 
+          dotnet-version: '8.x'
+      - name: restore
+        run:  dotnet restore
+      - name: publish
+        run:  dotnet build 
+      - name: publish de build
+        run:  dotnet publish --output ./publish
+      - name: check publish folder
+        run: ls -l ./publish
+      - name: login to azur
+        uses: Azure/login@v2
+        with:
+          creds: ${{secrets.GITHUB}}
+
