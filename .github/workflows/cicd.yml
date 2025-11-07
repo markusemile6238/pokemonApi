@@ -26,3 +26,6 @@ jobs:
         run:  dotnet publish --output ./publish
       - name: check publish folder
         run: ls -l ./publish
+      - name: login to azur
+        uses: Azure/login@v2.3.0
+      - name: published on azur
