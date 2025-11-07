@@ -23,6 +23,6 @@ jobs:
       - name: publish
         run:  dotnet build 
       - name: publish de build
-        run:  dotnet publish --output /publish
+        run:  dotnet publish --output ./publish
       - name: check publish folder
         run: ls -l ./publish
